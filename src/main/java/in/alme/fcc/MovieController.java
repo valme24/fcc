@@ -13,11 +13,11 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("api/")
+@RequestMapping("/api/")
 public class MovieController {
 
 
-    @Autowired
+  @Autowired
     MovieService movieService;
     @GetMapping
     public ResponseEntity<List<Movie>> getAllMovies(){
@@ -31,13 +31,13 @@ public class MovieController {
     }
 
 
-    @GetMapping("/{id}")
+    @GetMapping("id/{id}")
     public ResponseEntity<Optional<Movie>> getSingleMovie(@PathVariable ObjectId id){
            return new ResponseEntity< Optional<Movie>>(movieService.singleMovie(id),HttpStatus.OK);
     }
 
 
-    @GetMapping("/{imdb}")
+    @GetMapping("imdb/{imdb}")
     public ResponseEntity<Optional<Movie>> getMovieByImdb(@PathVariable String imdb){
         return new ResponseEntity< Optional<Movie>>(movieService.getMovieByImdb(imdb),HttpStatus.OK);
     }

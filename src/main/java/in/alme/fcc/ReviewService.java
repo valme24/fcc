@@ -12,7 +12,7 @@ public class ReviewService {
     private  ReviewRepository reviewRepository;
 
 
-    @Autowired
+   // @Autowired
     private MongoTemplate mongoTemplate;
 
 
