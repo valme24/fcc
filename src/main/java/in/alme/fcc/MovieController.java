@@ -23,6 +23,7 @@ public class MovieController {
     public ResponseEntity<List<Movie>> getAllMovies(){
 
         try {
+
             List<Movie> movies = movieService.getAllMovies();
             return new ResponseEntity<>(movies, HttpStatus.OK);
         } catch (Exception e) {

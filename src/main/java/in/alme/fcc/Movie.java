@@ -18,7 +18,7 @@ import java.util.List;
 
 public class Movie {
     @Id
- private ObjectId id;
+ private ObjectId _id;
  private  String imdbId;
  private String title;
  private String releaseDate;
@@ -30,3 +30,9 @@ public class Movie {
 private List<Review> reviewIds;
 
 }
+
+
+
+
+
+
